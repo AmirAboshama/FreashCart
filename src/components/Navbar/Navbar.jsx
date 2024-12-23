@@ -17,8 +17,9 @@ function logout(){
 <nav className="bg-gray-600 text-white  z-[5000] fixed start-0 end-0 top-0 border-gray-200 dark:bg-gray-900">
     <div className="flex flex-wrap justify-around items-center mx-auto max-w-screen-xl p-4">
        <div className='flex justify-center items-center gap-4'>
-       <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="../../public/freshcart-logo.svg" className="h-8" alt="Flowbite Logo" />
+       <NavLink to="/" className="flex text-[25px]  items-baseline space-x-3 rtl:space-x-reverse">
+       <i class= " text-green-500 fa-solid fa-cart-shopping"></i>
+    <h2 className='text-[25px] font-semibold' >Fresh Cart</h2>
         </NavLink>
     
        </div>

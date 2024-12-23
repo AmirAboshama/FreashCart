@@ -31,7 +31,7 @@ let client= new QueryClient()
 QueryClientProvider
 const router= createBrowserRouter([
   {path:"",element:<Layout/>,children:[
-    {index:true,element: <ProtectedRoute><Home/></ProtectedRoute> },
+    {index:true,element: <Home/>},
     {path:"Cart",element: <ProtectedRoute><Cart/></ProtectedRoute> },
     {path:"Products",element:<ProtectedRoute><Products/></ProtectedRoute> },
     {path:"Brands",element: <ProtectedRoute><Brands/></ProtectedRoute>},

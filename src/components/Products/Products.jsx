@@ -7,8 +7,11 @@ import { useContext } from 'react'
 import { CartContext } from '../../Context/CartContext'
 import toast from 'react-hot-toast'
 import { WishListContext } from '../../Context/WishListContext'
+import { userContext } from '../../Context/UserContext'
 
 export default  function Products() {
+  let{setToken,token}=useContext(userContext)
+  
 let [Color, setColor] = useState(false)
 
  async function click(Color,x){
@@ -121,10 +124,9 @@ if(Eroor){
 {product.priceAfterDiscount?<span className='absolute bg-red-700 top-0 p-2 rounded-b-md text-white  '>sale</span>
 :null}
 </Link>
-<button  onClick={()=>addproductWishList(product.id)}  className={Color ?"text-red-500" :null}><i class=" fa-solid fa-heart"></i></button>
+{token?<div><button  onClick={()=>addproductWishList(product.id)}  className={Color ?"text-red-500" :null}><i class=" fa-solid fa-heart"></i></button>
 
-<button onClick={()=>addproductcart(product.id)} className=' btn group-hover:translate-y-[0%]  translate-y-[300%] '>add to cart </button>
-
+<button onClick={()=>addproductcart(product.id)} className=' btn group-hover:translate-y-[0%]  translate-y-[300%] '>add to cart </button></div>  :null}
 </div>)}
 
 </div> } 
